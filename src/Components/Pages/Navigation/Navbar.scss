@@ -1,0 +1,180 @@
+.nav-container {
+  background-color: #585858;
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  z-index: 23;
+}
+.logo-side {
+  margin-top: 25px;
+  margin-left: 2px;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  transition: 0.7s;
+  .logo-img-side {
+    display: inline-block;
+    vertical-align: middle;
+    width: 49px;
+    transition: 0.7s;
+    img {
+      width: 100%;
+    }
+  }
+  a {
+    display: block;
+  }
+}
+
+img:hover {
+  color: white !important;
+}
+.media-side {
+  display: grid;
+  margin-left: 2px;
+  .media-side-link {
+    a {
+      color: white;
+      padding: 0;
+      font-size: 40px;
+    }
+  }
+  .media-side-link2 {
+    a {
+      margin-top: -13px;
+      font-weight: bolder;
+      font-size: 16.5px;
+      font-weight: 500;
+      padding: 0;
+      color: #80af41;
+    }
+
+    span {
+      color: #cccccc;
+      font-size: 16.5px;
+      display: inline-block;
+      margin-left: -3px;
+    }
+  }
+}
+.media-side-link {
+  font-size: 30px;
+  color: white;
+}
+
+// =====================Nav==========================================================
+
+nav {
+  float: right;
+  margin-top: 38px;
+  width: 860px;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  a {
+    color: white;
+
+    font-size: 17px;
+    font-family: inherit;
+  }
+  a:hover {
+    color: #80af41;
+    transform: 0.7s;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  display: inline-block;
+  margin: 0.5rem;
+}
+a {
+  text-decoration: none;
+  display: block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 0.5rem;
+  transition: 0.7s;
+}
+a:hover {
+  cursor: pointer;
+}
+// ==============================Burger===============================================
+.menu-btn {
+  display: flex;
+  // flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  block-size: 20px;
+  inline-size: 46px;
+  max-width: 46px;
+  float: right;
+  cursor: pointer;
+  outline: none;
+  margin: 14px 9px 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.bar-line-short,
+.bar-lines {
+  inline-size: 46px;
+  block-size: 2.5px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(225, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.bar-lines {
+  display: flex;
+  justify-content: flex-end;
+}
+.bar-line-short {
+  inline-size: 30px;
+  height: 2px;
+  margin-top: 9px;
+  transform: rotate(360deg);
+}
+.bar-line-short:hover {
+  inline-size: 46px;
+  transition: 0.3s ease-in;
+}
+// .bar-lines::after,
+.bar-lines::before {
+  content: "";
+  position: absolute;
+  inline-size: 46px;
+  block-size: 2.5px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(225, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.bar-lines::before {
+  margin-top: 5px;
+}
+
+.bar-lines::after {
+  margin-top: -5px;
+}
+
+.bar-lines::before {
+  transform: translateY(-14px);
+}
+.bar-lines::after {
+  transform: translateY(14px);
+}
+
+/* Animation  */
+.menu-btn.open .bar-lines {
+  transform: translate(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .bar-lines::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .bar-lines::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
